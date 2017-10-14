@@ -5,14 +5,14 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 function Vehicle() {
   this.acceleration = new THREE.Vector3(0,0,0);
   this.velocity = new THREE.Vector3(random(-1,1),random(-1,1),random(-1,1));
-  var splay = 1000;
+  var splay = 10;
   this.position = new THREE.Vector3(random(-splay,splay),random(-splay,splay),random(-splay,splay));
   this.r = 3.0;
   this.maxspeed = 3;    // Maximum speed
     this.maxforce = 0.05; // Maximum steering force
 
 
-    this.geometry = new THREE.SphereGeometry( 5, 32, 32 );
+    this.geometry = new THREE.SphereGeometry( 1, 32, 32 );
     this.material = new THREE.MeshPhongMaterial( {color: 'yellow'} );
     this.sphere = new THREE.Mesh( this.geometry, this.material );
     scene.add( this.sphere );
@@ -64,8 +64,8 @@ function Vehicle() {
     var coh = this.cohesion(vehicles);   // Cohesion
     // Arbitrarily weight these forces
     
-    ali.multiplyScalar(1.0);
-    coh.multiplyScalar(1.0);
+    ali.multiplyScalar(1);
+    coh.multiplyScalar(1);
     // Add the force vectors to acceleration
     
     this.applyForce(ali);
