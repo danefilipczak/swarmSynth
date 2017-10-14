@@ -1,3 +1,7 @@
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+
+
 function Vehicle() {
   this.acceleration = new THREE.Vector3(0,0,0);
   this.velocity = new THREE.Vector3(random(-1,1),random(-1,1),random(-1,1));
@@ -9,9 +13,26 @@ function Vehicle() {
 
 
     this.geometry = new THREE.SphereGeometry( 5, 32, 32 );
-    this.material = new THREE.MeshPhongMaterial( {color: 0xffff00} );
+    this.material = new THREE.MeshPhongMaterial( {color: 'yellow'} );
     this.sphere = new THREE.Mesh( this.geometry, this.material );
     scene.add( this.sphere );
+
+
+    this.panNode = audioCtx.createStereoPanner();
+    this.panNode.connect(audioCtx.destination);
+
+    this.gainNode = audioCtx.createGain();
+    this.gainNode.connect(this.panNode);
+    // this.gainNode.gain.linearRampToValueAtTime(0.1, audioCtx.currentTime + 2);
+    this.gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+
+    this.oscillator = audioCtx.createOscillator();
+    this.oscillator.type = 'sine';
+    this.oscillator.frequency.value = 440; // value in hertz
+    this.oscillator.connect(this.gainNode);
+    this.oscillator.start();
+
+
 
 
   this.run = function(vehicles) {
@@ -101,6 +122,9 @@ function Vehicle() {
     // pop();
     // console.log(this.position.x)
     this.sphere.position.copy(this.position);
+
+    this.oscillator.frequency.linearRampToValueAtTime(this.position.y, audioCtx.currentTime + 0.1)
+    this.panNode.pan.linearRampToValueAtTime(map(this.position.x, -500, 500, -1, 1), audioCtx.currentTime + 0.05)
   };
 
   // Wraparound
