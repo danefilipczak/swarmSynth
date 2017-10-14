@@ -1,0 +1,257 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2245,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/danefilipczak/Developer/kaolin_pigeon/css/styles.css",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/js/species.js",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/countryCodes.json",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/redListCountries.json",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/world.geo.json",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/js/app.js",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/js/map.js",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/index.html",
+		"/Users/danefilipczak/Developer/kaolin_pigeon/css/main.css",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/models.py",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/application.py",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/editItem.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/login.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/base.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/lotsofwords.py",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/static/styles/main.css",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/deleteItem.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/item.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/main.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/templates/addItem.html",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/catalog/static/style.css",
+		"/Users/danefilipczak/Documents/oauth/APIs/Lesson_4/05_Mom & Pop’s Bagel Shop/starter_code/models.py",
+		"/Users/danefilipczak/Documents/oauth/APIs/Lesson_4/05_Mom & Pop’s Bagel Shop/starter_code/views.py",
+		"/Users/danefilipczak/Documents/oauth/project.py",
+		"/Users/danefilipczak/Documents/oauth/templates/login.html",
+		"/Users/danefilipczak/Documents/force-directed_graph/contributors.js",
+		"/Users/danefilipczak/Documents/force-directed_graph/force-direced_graph.sublime-project",
+		"/Users/danefilipczak/Documents/force-directed_graph/node.js",
+		"/Users/danefilipczak/Documents/force-directed_graph/sketch.js",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/database_project/output.txt",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/database_project/README.md",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/database_project/dbproj.py",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/forum/forumdb.py",
+		"/Users/danefilipczak/Documents/FSND-Virtual-Machine/vagrant/forum/forum.py",
+		"/Users/danefilipczak/Documents/force-directed_graph/readme.md",
+		"/Users/danefilipczak/Documents/force-directed_graph/index.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"taxonomy",
+			"self.scientific",
+			"countries",
+			"self.vernacular",
+			"highlightcountries",
+			"self.scientific",
+			"getTaxonomy",
+			"scientific",
+			"this",
+			"nodes[i]",
+			"this"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self",
+			"n",
+			"nodes[i]"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "swarmsynth.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
