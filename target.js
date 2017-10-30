@@ -34,26 +34,36 @@
 //     ofPopMatrix();
 // }
 
+
+
 function Target() {
     var side = 1;
-    this.geometry = new THREE.BoxGeometry(side, side, side);
-    this.material = new THREE.MeshPhongMaterial({
-        color: 0x00ff00
+    this.geometry = new THREE.BoxGeometry(side * 4, side, side * 4);
+    // this.material = new THREE.MeshPhongMaterial({
+    //     color: 0x00ff00
+    // });
+    var shader = THREE.FresnelShader;
+    var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+    uniforms["tCube"].value = textureCube;
+    this.material = new THREE.ShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: shader.vertexShader,
+        fragmentShader: shader.fragmentShader
     });
     this.cube = new THREE.Mesh(this.geometry, this.material);
     scene.add(this.cube);
 }
 
-Target.prototype.setY = function(y){
+Target.prototype.setY = function(y) {
     this.cube.position.setComponent(1, y);
 }
 
-setTargets = function(nn){
+setTargets = function(nn) {
     //given a midi note number, space out the targets to overtones of that note
 
     var fundamental = midifreq(nn);
-    for(var i = 1; i<targets.length+1; i++){
-        targets[i-1].setY(freqmidi(fundamental*i));
+    for (var i = 1; i < targets.length + 1; i++) {
+        targets[i - 1].setY(freqmidi(fundamental * i) * nnworld);
     }
 }
 
