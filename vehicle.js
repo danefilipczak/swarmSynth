@@ -8,8 +8,8 @@ function Vehicle() {
   var splay = 10;
   this.position = new THREE.Vector3(random(-splay, splay), random(-splay, splay), random(-splay, splay));
   this.r = 3;
-  this.maxspeed = 3; // Maximum speed
-  this.maxforce = 0.05; // Maximum steering force
+  this.maxspeed = 20; // Maximum speed
+  this.maxforce = 0.1; // Maximum steering force
 
 
   this.geometry = new THREE.SphereGeometry(this.r, 32, 32);
@@ -38,9 +38,9 @@ function Vehicle() {
   // this.gainNode.gain.linearRampToValueAtTime(0.1, audioCtx.currentTime + 2);
   this.gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
 
-  this.oscillator = audioCtx.createOscillator();
+  this.oscillator = audioCtx.createOscillator();      
   this.oscillator.type = 'sine';
-  this.oscillator.frequency.value = 440; // value in hertz
+  this.oscillator.frequency.value = 2; // value in hertz
   this.oscillator.connect(this.gainNode);
   this.oscillator.start();
 
@@ -48,15 +48,17 @@ function Vehicle() {
 
   this.run = function(vehicles) {
     if (flock) {
-      this.flock(vehicles);
+      this.flock(vehicles, 0.1);
     }
 
 
-    var center = this.seek(new THREE.Vector3(0, 0, 0));
-    this.applyForce(center)
+    var seek = this.seek(this.getClosestTarget());
+    seek.setComponent(1, seek.y*10)
+    this.applyForce(seek)
 
     var sep = this.separate(vehicles);
     sep.multiplyScalar(1.5);
+    sep.setComponent(1, sep.y*0.8)
     this.applyForce(sep);
 
 
@@ -65,20 +67,37 @@ function Vehicle() {
     this.render();
   };
 
+  this.getClosestTarget = function(){
+    // var vec = new THREE.Vector3();
+    var closest;
+    var shortestDist = Infinity;
+    
+    for(var i = 0; i<targets.length; i++){
+      var vec = new THREE.Vector3();
+      vec.set(0, targets[i].y, 0)
+      var dist = this.position.distanceTo(vec);
+      if(dist<shortestDist){
+        shortestDist = dist;
+        closest = vec;
+      }
+    }
+    return closest;
+  }
+
   this.applyForce = function(force) {
     // We could add mass here if we want A = F / M
     this.acceleration.add(force);
   };
 
   // We accumulate a new acceleration each time based on three rules
-  this.flock = function(vehicles) {
+  this.flock = function(vehicles, amount) {
     // Separation
     var ali = this.align(vehicles); // Alignment
     var coh = this.cohesion(vehicles); // Cohesion
     // Arbitrarily weight these forces
 
-    ali.multiplyScalar(1);
-    coh.multiplyScalar(1);
+    ali.multiplyScalar(amount);
+    coh.multiplyScalar(amount);
     // Add the force vectors to acceleration
 
     this.applyForce(ali);
@@ -136,7 +155,8 @@ function Vehicle() {
     // console.log(this.position.x)
     this.sphere.position.copy(this.position);
 
-    this.oscillator.frequency.linearRampToValueAtTime(this.position.y, audioCtx.currentTime + 0.1)
+    var freq = midifreq(this.position.y/nnworld)
+    this.oscillator.frequency.linearRampToValueAtTime(freq, audioCtx.currentTime + 0.1)
     this.panNode.pan.linearRampToValueAtTime(map(this.position.x, -500, 500, -1, 1), audioCtx.currentTime + 0.05)
   };
 

@@ -8,7 +8,7 @@ var orbit;
 var flock = false;
 var skyBox;
 
-var nnworld = 4; //midi note number to world conversion scalar factor
+var nnworld = 7; //midi note number to world conversion scalar factor
 
 
 
@@ -18,9 +18,11 @@ window.onload = function() {
 	scene = new THREE.Scene();
 	//scene.add(group);
 	scene.background = new THREE.Color('blue');
-	camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+	camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2500);
 	camera.position.z = 50;
 	camera.position.y = 20;
+
+	// camera.far=10
 
 	orbit = new THREE.OrbitControls(camera)
 
@@ -40,10 +42,10 @@ window.onload = function() {
 		vehicles.push(new Vehicle())
 	}
 
-	for (var i = 0; i < 15; i++) {
+	for (var i = 0; i < 12; i++) {
 		targets.push(new Target());
 	}
-	setTargets(0)
+	setTargets(40)
 
 
 
@@ -71,7 +73,7 @@ window.onload = function() {
 	var imagePrefix = "textures/";
 	var directions = ["posx", "negx", "posy", "negy", "posz", "negz"];
 	var imageSuffix = ".jpg";
-	var sides = 1000;
+	var sides = 2000;
 	var skyGeometry = new THREE.BoxGeometry(sides, sides, sides);
 	var loader = new THREE.TextureLoader();
 
@@ -85,6 +87,8 @@ window.onload = function() {
 	// var skyMaterial = new THREE.MeshPhongMaterial( {color:'black'} );
 	// skyMaterial.side = THREE.BackSide;
 	skyBox = new THREE.Mesh(skyGeometry, skyMaterial);
+	skyBox.position.setComponent(1, 1000)
+	skyBox.rotation.y=15
 	scene.add(skyBox)
 
 
