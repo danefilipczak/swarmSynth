@@ -24,7 +24,7 @@
 			"file": "loop.js",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 438,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "function loop(){"
@@ -34,7 +34,7 @@
 			"file": "setup.js",
 			"settings":
 			{
-				"buffer_size": 2021,
+				"buffer_size": 2181,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "var renderer, scene, camera, ambient, group;"
@@ -44,7 +44,7 @@
 			"file": "orbitcontrols.js",
 			"settings":
 			{
-				"buffer_size": 22660,
+				"buffer_size": 22763,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -53,7 +53,7 @@
 			"file": "target.js",
 			"settings":
 			{
-				"buffer_size": 1913,
+				"buffer_size": 2081,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "//"
@@ -63,7 +63,7 @@
 			"file": "vehicle.js",
 			"settings":
 			{
-				"buffer_size": 7404,
+				"buffer_size": 7946,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -165,7 +165,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -180,6 +180,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"render",
+			"panOffset",
+			"this.update",
+			"update",
+			"panOffset",
+			"this.panOff",
+			"panOffset",
+			"pan",
 			"1000",
 			"p5.Vector",
 			"dist",
@@ -219,7 +227,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -248,7 +256,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -257,15 +265,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								264,
+								264
 							]
 						],
 						"settings":
@@ -277,7 +285,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -286,15 +294,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2021,
+						"buffer_size": 2181,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								423,
+								423
 							]
 						],
 						"settings":
@@ -304,10 +312,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 176.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -316,15 +324,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22660,
+						"buffer_size": 22763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1012,
-								1012
+								8442,
+								8442
 							]
 						],
 						"settings":
@@ -333,10 +341,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 5424.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -345,15 +353,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1913,
+						"buffer_size": 2081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								962,
-								962
+								1717,
+								1717
 							]
 						],
 						"settings":
@@ -364,10 +372,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 500.0,
+						"translation.y": 829.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -376,15 +384,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7404,
+						"buffer_size": 7946,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								591,
-								726
+								1593,
+								1593
 							]
 						],
 						"settings":
@@ -394,7 +402,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 120.0,
+						"translation.y": 804.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -425,7 +433,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -455,7 +463,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -514,12 +522,12 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{

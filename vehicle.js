@@ -4,9 +4,9 @@ var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
 function Vehicle() {
   this.acceleration = new THREE.Vector3(0, 0, 0);
-  this.velocity = new THREE.Vector3(random(-1, 1), random(-1, 1), random(-1, 1));
+  this.velocity = new THREE.Vector3(p5.random(-1, 1), p5.random(-1, 1), p5.random(-1, 1));
   var splay = 10;
-  this.position = new THREE.Vector3(random(-splay, splay), random(-splay, splay), random(-splay, splay));
+  this.position = new THREE.Vector3(p5.random(-splay, splay), p5.random(-splay, splay), p5.random(-splay, splay));
   this.r = 3;
   this.maxspeed = 20; // Maximum speed
   this.maxforce = 0.1; // Maximum steering force
@@ -157,7 +157,7 @@ function Vehicle() {
 
     var freq = midifreq(this.position.y/nnworld)
     this.oscillator.frequency.linearRampToValueAtTime(freq, audioCtx.currentTime + 0.1)
-    this.panNode.pan.linearRampToValueAtTime(map(this.position.x, -500, 500, -1, 1), audioCtx.currentTime + 0.05)
+    this.panNode.pan.linearRampToValueAtTime(p5.map(this.position.x, -500, 500, -1, 1), audioCtx.currentTime + 0.05)
   };
 
   // Wraparound

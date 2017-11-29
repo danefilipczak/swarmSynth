@@ -18,7 +18,7 @@ window.onload = function() {
 	scene = new THREE.Scene();
 	//scene.add(group);
 	scene.background = new THREE.Color('blue');
-	camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2500);
+	camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight), 0.1, 2500);
 	camera.position.z = 50;
 	camera.position.y = 20;
 
