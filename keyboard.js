@@ -43,7 +43,7 @@ function BlackKey(x_, y_, w_, h_) {
 		// p5.rectMode(p5.CENTER)
 		// p5.fill(255, 255, 100, 100)
 		p5.noFill()
-		p5.stroke(0)
+		p5.stroke(150)
 		p5.strokeWeight(1)
 		this.over ? p5.fill(255, 35, 35) : p5.fill(25);
 		if(this.active){p5.fill(0, 255, 255)}
