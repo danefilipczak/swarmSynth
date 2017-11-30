@@ -132,4 +132,10 @@ Keyboard.prototype.populate = function() {
 
 
 	this.keys = blackKeys.concat(whiteKeys)
+	//approximate octave spread
+	var octaves = Math.round( (this.keys[this.keys.length-1].nn - this.keys[0].nn) / 12 )
+	console.log(octaves)
+	this.keys.forEach(function(k){
+		k.nn+=12*(5-(octaves/2))
+	})
 }

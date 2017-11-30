@@ -157,7 +157,8 @@ function Vehicle() {
 
     var freq = midifreq(this.position.y/nnworld)
     this.oscillator.frequency.linearRampToValueAtTime(freq, audioCtx.currentTime + 0.1)
-    this.panNode.pan.linearRampToValueAtTime(p5.map(this.position.x, -500, 500, -1, 1), audioCtx.currentTime + 0.05)
+    this.panNode.pan.linearRampToValueAtTime(p5.constrain(p5.map(this.position.x, -5, 5, -1, 1), -1, 1), audioCtx.currentTime + 0.05)
+    this.gainNode.gain.setValueAtTime(p5.constrain(p5.map(this.position.z, -5, 5, 0.05, 0.1), 0, 0.1), audioCtx.currentTime+0.05)
   };
 
   // Wraparound

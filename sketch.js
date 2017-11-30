@@ -7,6 +7,7 @@ var sketch = function (p5) {
 	p5.setup = function(){
 		c = p5.createCanvas(window.innerWidth, 100);
     	c.position(0, window.innerHeight-100-(100*0.318))
+    	c.style("cursor", "pointer");
     	p5.background(10, 100)
     	var width = p5.width;
     	if(width>1200){width=1200};
@@ -14,8 +15,15 @@ var sketch = function (p5) {
     		setTargets(n);
     	})
     	p5.frameRate(24)
-    	currentActive = keyboard.keys[0];
-    	keyboard.keys[0].active=true;
+    	// keyboard.keys.forEach(function(k){
+    	// 	if(k.nn==60){
+    	// 		currentActive = k;
+    	// 		k.active = true;
+    	// 	}
+    	// })
+    	currentActive = new BlackKey()
+    	// currentActive = keyboard.keys[0];
+    	// keyboard.keys[0].active=true;
 	}
 
 	p5.draw = function(){
