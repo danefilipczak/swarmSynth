@@ -36,6 +36,7 @@ var sketch = function (p5) {
 		currentActive = currentOver;
 		currentActive.active=true;
 		}
+		setTargets(currentActive.nn)
 
 
 	}
