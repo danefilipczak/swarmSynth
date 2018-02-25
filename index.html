@@ -18,15 +18,47 @@
 <head>
 
 	<style>
-	
+	.volume{
+		position:fixed;
+		z-index:4;
+	}
 	
 	</style>
 
 </head>
 
 <body>
+<div class = "volume">
+	<button style = "font-size:20px" class = "soundOff" onclick="mute()">	&#128263;</button><br>
+	<button style = "font-size:20px" class ="soundOn" disabled onclick="unmute()">	&#128264;</button>
+</div>
 
 	<script>
+	//var muted = false
+	function mute(){
+		setMaster(0)
+				document.getElementsByClassName('soundOff')[0].disabled = true;
+				document.getElementsByClassName('soundOn')[0].disabled = false;
+
+	}
+	function unmute(){
+		setMaster(1)
+		document.getElementsByClassName('soundOn')[0].disabled = true;
+		document.getElementsByClassName('soundOff')[0].disabled = false;
+	}
+		function toggleMute(){
+			if(muted){
+				//unmute
+				
+				
+				muted = false
+			} else {
+				//mute
+				
+				muted = true
+			}
+			console.log('tog')
+		}
 		
 			var render = function () {
 				// console.log('o')

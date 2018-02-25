@@ -19,7 +19,7 @@ window.onload = function() {
 	//scene.add(group);
 	scene.background = new THREE.Color('blue');
 	camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight), 0.1, 2500);
-	camera.position.z = 50;
+	camera.position.z = -50;
 	camera.position.y = 20;
 
 	// camera.far=10
@@ -88,7 +88,7 @@ window.onload = function() {
 	// skyMaterial.side = THREE.BackSide;
 	skyBox = new THREE.Mesh(skyGeometry, skyMaterial);
 	skyBox.position.setComponent(1, 1000)
-	skyBox.rotation.y=15
+	skyBox.rotation.y=150
 	scene.add(skyBox)
 
 

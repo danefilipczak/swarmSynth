@@ -1,6 +1,12 @@
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var masterGain = audioCtx.createGain();
+masterGain.connect(audioCtx.destination)
+masterGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime)
+masterGain.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 10)
 
-
+function setMaster(volume){
+  masterGain.gain.linearRampToValueAtTime(volume, audioCtx.currentTime + 1)
+}
 
 function Vehicle() {
   this.acceleration = new THREE.Vector3(0, 0, 0);
@@ -31,7 +37,7 @@ function Vehicle() {
 
 
   this.panNode = audioCtx.createStereoPanner();
-  this.panNode.connect(audioCtx.destination);
+  this.panNode.connect(masterGain);
 
   this.gainNode = audioCtx.createGain();
   this.gainNode.connect(this.panNode);
